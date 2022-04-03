@@ -9,9 +9,9 @@ Output: 3
 // The possible decodings are "ABCD", "LCD", "AWD"
 */
 
-// using recursion
+// using recursion and DP
 public class CountDecoding {
-
+	
 	public static void main(String[] args) {
 		String str="2611055971756562";
 		char digit1[] = { '1', '4', '2', '3' };
