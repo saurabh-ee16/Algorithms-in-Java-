@@ -2,8 +2,7 @@ package resursionAndDp;
 
 import java.util.Scanner;
 
-// fibonacci without using Dynamic Programming
-
+// fibonacci with Recursion 
 public class Fibonacci2 {
 	
 

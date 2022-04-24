@@ -65,7 +65,7 @@ public class BST {
             return;
 
         inOrder(root.left);
-        System.out.println(root.data);
+        System.out.print(root.data+" ");
         inOrder(root.right);
 
     }
@@ -79,8 +79,9 @@ public class BST {
         insertNode(root, 12);
         insertNode(root, 17);
         insertNode(root, 25);
-
+        System.out.print("level order traversal: ");
         levelOrderTraversal(root);
+        System.out.print("\nInorder traversal: ");
         inOrder(root);
     }
 
