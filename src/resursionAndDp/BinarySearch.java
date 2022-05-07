@@ -1,22 +1,38 @@
 package resursionAndDp;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
+import java.util.List;
 
 public class BinarySearch {
 
 	public static void main(String[] args) {
-		int target = 78;
-		int arr[] = new Random().ints(0,100).distinct().limit(100).toArray();
-		Arrays.sort(arr);
+		int target = 4600;
+		List<Integer> list = new ArrayList<>();
 
-		System.out.println(Arrays.toString(arr));
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("MOCK_DATA.csv"));
+			String line;
+			while ((line = br.readLine()) != null) {
+				list.add(Integer.valueOf(line));
+			}
+
+		} catch (NumberFormatException | IOException e) {
+
+			System.out.println(e.getMessage());
+		}
+		int[] arr = list.stream().mapToInt(Integer::intValue).toArray();
+
+		Arrays.sort(arr);
 
 		int index = search(arr, 0, arr.length - 1, target);
 		if (index < 0)
 			System.out.println("Not found");
 		else
-			System.out.printf("arr[%d]=%d", target, arr[index]);
+			System.out.printf("arr[%d]=%d", index, arr[index]);
 	}
 
 	public static int search(int[] arr, int s, int e, int target) {
