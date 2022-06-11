@@ -1,7 +1,5 @@
 package resursionAndDp;
 
-import java.util.Arrays;
-
 //reverse a string of words "welcome to gfg --> gfg to welcome"
 public class ReverseString {
 

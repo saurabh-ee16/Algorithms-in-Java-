@@ -1,7 +1,5 @@
 package linkedlist;
 
-import java.util.Optional;
-
 public class LinkedListImpl {
 
 	public static void main(String[] args) {
