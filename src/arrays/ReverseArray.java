@@ -15,16 +15,15 @@ public class ReverseArray {
 
 	private static void reverse(int[] arr, int low, int high) {
 
-		if(low>high)
+		if (low > high)
 			return;
-		
+
 		int temp = arr[low];
 		arr[low] = arr[high];
 		arr[high] = temp;
 
-		reverse(arr, low+1, high-1);
-		
-		
+		reverse(arr, low + 1, high - 1);
+
 	}
 
 }

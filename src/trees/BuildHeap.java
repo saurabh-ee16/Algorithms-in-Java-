@@ -35,7 +35,7 @@ public class BuildHeap {
         }
         if (smallest != i) {
             Collections.swap(list, smallest, i);
-            minHeapify(list, smallest); 
+            minHeapify(list, smallest);
         }
 
     }
